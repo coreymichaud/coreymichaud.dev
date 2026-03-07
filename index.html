@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="author" content="Corey Michaud">
+    <meta name="description" content="Corey Michaud's website!">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Corey Michaud">
+    <meta property="og:description" content="Corey Michaud's website!">
+    <meta property="og:image" content="corey.webp">
+    <meta property="og:url" content="https://coreymichaud.com">
+
+    <!--- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Other information -->
+    <title>Corey Michaud</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preload" as="image" href="images/corey.webp">
+    <link rel="preload" as="image" href="icons/location.svg">
+    <link rel="preload" as="image" href="icons/github.svg">
+    <link rel="preload" as="image" href="icons/linkedin.svg">
+    <link rel="preload" as="image" href="icons/kaggle.svg">
+    <link rel="preload" as="image" href="icons/tableau.svg">
+    <link rel="preload" as="image" href="icons/email.svg">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+    <div class="hero-image">
+        <img src="images/corey.webp" alt="Corey Michaud" fetchpriority="high">
+        <div class="location-badge">
+            <img src="icons/location.svg" alt="Location" fetchpriority="high"> Orlando, FL
+        </div>
+    </div>
+
+    <div class="hero-text">
+        <h1>Corey Michaud</h1>
+        <p>
+            <span class="highlight">Data Person</span> solving data problems
+            with <span class="highlight">Python, SQL, and machine learning</span>
+            by doing rather than <span class="highlight">don'ting</span>
+        </p>
+        <div class="hero-icons">
+            <a href="https://github.com/coreymichaud" target="_blank"><img src="icons/github.svg" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/coreymichaud1/" target="_blank"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://www.kaggle.com/coreymichaud" target="_blank"><img src="icons/kaggle.svg" alt="Kaggle"></a>
+            <a href="https://public.tableau.com/app/profile/corey.michaud/vizzes" target="_blank"><img src="icons/tableau.svg" alt="Tableau"></a>
+            <a href="mailto:cor3y.michaud@gmail.com"><img src="icons/email.svg" alt="Email"></a>
+        </div>
+    </div>
+    </section>
+
+    <!-- ABOUT -->
+    <h1 id="about" class="section-header"><em>ABOUT</em></h1>
+
+    <p>I am talking I am talking! I am going to try to do 2 paragraphs so it doesn't look little, but I HAVE to remember that this should not be long at all. I also need
+        to remember that this is not a resume, so I should not be listing out all of my skills and experience. I want to give a brief overview of who I am and what I do, 
+        but I also want to leave some things out so that people will want to reach out to me to learn more. I also want to make sure that I am not just talking about myself, but also about 
+        how I can help others and what value I can bring to the table. I want to make sure that I am not just talking about my past experience, but also about my future goals and aspirations.
+    </p>
+
+    <p>I am talking I am talking! I am going to try to do 2 paragraphs so it doesn't look little, but I HAVE to remember that this should not be long at all. I also need
+        to remember that this is not a resume, so I should not be listing out all of my skills and experience. I want to give a brief overview of who I am and what I do, 
+        but I also want to leave some things out so that people will want to reach out to me to learn more. I also want to make sure that I am not just talking about myself, but also about 
+        how I can help others and what value I can bring to the table. I want to make sure that I am not just talking about my past experience, but also about my future goals and aspirations.
+    </p>
+
+    <h2>Work Experience</h2>
+
+    <!-- Deloitte -->
+    <div class="job-card">
+        <details>
+            <summary>
+            <div class="card-left">
+                <img src="images/deloitte.webp" alt="Deloitte company logo" width="48" height="48" loading="lazy">
+                <div class="card-text">
+                <span class="company-name">
+                    Deloitte
+                    <span class="chevron">&#8250;</span>
+                </span>
+                <span class="job-title">Solution Analyst</span>
+                </div>
+            </div>
+            <div class="card-right">
+                <span class="location">Lake Mary, FL</span>
+                <span class="date">Aug 2025 - Present</span>
+            </div>
+            </summary>
+            <ul>
+            <li>Led end-to-end development of an LLM-powered chatbot (170K+ active users), performing prompt engineering, structured model evaluations, and designing analytics, visualization, and slide-generation features using state-of-the-art LLMs.</li>
+            <li>Built and deployed a Power BI dashboard optimizing operating room instrument cart preparation for 30 medical staff, translating clinical workflows into scalable, data-driven operational insights.</li>
+            <li>Defined quantitative evaluation metrics and experimental frameworks to improve model performance, collaborating cross-functionally to translate business requirements into production-ready AI features.</li>
+            </ul>
+        </details>
+    </div>
+
+    <!-- Thompson Consulting Services -->
+    <div class="job-card">
+        <details>
+            <summary>
+            <div class="card-left">
+                <img src="images/tcs.webp" alt="Thompson Consulting Services company logo" width="48" height="48" loading="lazy">
+                <div class="card-text">
+                <span class="company-name">
+                    Thompson Consulting Services
+                    <span class="chevron">&#8250;</span>
+                </span>
+                <span class="job-title">Data Administrator</span>
+                </div>
+            </div>
+            <div class="card-right">
+                <span class="location"> Maitland, FL</span>
+                <span class="date">Nov 2024 - Aug 2025</span>
+            </div>
+            </summary>
+            <ul>
+            <li>Analyzed disaster relief datasets in collaboration with multiple government agencies, applying statistical analysis and geospatial techniques to improve situational awareness and operational decision-making.</li>
+            <li>Led three cross-functional data initiatives, working with field teams to streamline data ingestion and analysis workflows, resulting in a 35% improvement in decision-support KPIs.</li>
+            <li>Helped standardize data processes and analytical outputs to ensure consistent, trustworthy insights across stakeholders with varying technical backgrounds.</li>
+            </ul>
+        </details>
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="education-card">
+        <div class="card-summary">
+            <div class="card-left">
+            <img src="images/UCF.webp" alt="School logo" width="48" height="48" loading="lazy">
+            <div class="card-text">
+                <span class="company-name">University of Central Florida</span>
+                <span class="job-title">B.S. Statistics</span>
+            </div>
+            </div>
+            <div class="card-right">
+            <span class="location">Orlando, FL</span>
+            <span class="date">May 2024</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PROJECTS -->
+    <h1 id="projects" class="section-header"><em>PROJECTS</em></h1>
+
+    <div class="project-layout">
+
+        <div class="project-card">
+            <a href="" target="_blank">
+                <img src="images/placeholder.webp" alt="Project image" loading="lazy"/>
+                <div class = "container">
+                    <h4><b>Project Title</b></h4>
+                    <p>Project description goes here. This is a brief overview of the project, highlighting the main features and technologies used.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="" target="_blank">
+                <img src="images/placeholder.webp" alt="Project image" loading="lazy"/>
+                <div class = "container">
+                    <h4><b>Project Title</b></h4>
+                    <p>Project description goes here. This is a brief overview of the project, highlighting the main features and technologies used.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="" target="_blank">
+                <img src="images/placeholder.webp" alt="Project image" loading="lazy"/>
+                <div class = "container">
+                    <h4><b>Project Title</b></h4>
+                    <p>Project description goes here. This is a brief overview of the project, highlighting the main features and technologies used.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="" target="_blank">
+                <img src="images/placeholder.webp" alt="Project image" loading="lazy"/>
+                <div class = "container">
+                    <h4><b>Project Title</b></h4>
+                    <p>Project description goes here. This is a brief overview of the project, highlighting the main features and technologies used.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="" target="_blank">
+                <img src="images/placeholder.webp" alt="Project image" loading="lazy"/>
+                <div class = "container">
+                    <h4><b>Project Title</b></h4>
+                    <p>Project description goes here. This is a brief overview of the project, highlighting the main features and technologies used.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="" target="_blank">
+                <img src="images/placeholder.webp" alt="Project image" loading="lazy"/>
+                <div class = "container">
+                    <h4><b>Project Title</b></h4>
+                    <p>Project description goes here. This is a brief overview of the project, highlighting the main features and technologies used.</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="see-more">
+        <a href="https://github.com/coreymichaud" target="_blank">
+            <button class="more">See more -></button>
+        </a>
+    </div>
+
+    <!-- BLOG -->
+    <h1 id="blog" class="section-header"><em>LATEST POSTS</em></h1>
+
+    <div class="blog-layout">
+
+        <div class="blog-card">
+            <a href="https://substack.com/@coreymichaud" target="_blank">
+            <div class="blog-meta">
+                <div class="blog-meta-left">
+                <span class="meta-item">
+                    <img src="icons/calendar.svg" alt="Date" width="14" height="14" loading="lazy">
+                    March 07, 2025
+                </span>
+                <span class="meta-item">
+                    <img src="icons/clock.svg" alt="Read time" width="14" height="14" loading="lazy">
+                    5 min read
+                </span>
+                </div>
+                <img src="icons/substack.svg" alt="Substack" width="20" height="20" loading="lazy">
+            </div>
+            <div class="blog-content">
+                <h4>Blog Post Title Goes Here</h4>
+                <p>This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating.</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+            <a href="https://substack.com/@coreymichaud" target="_blank">
+            <div class="blog-meta">
+                <div class="blog-meta-left">
+                <span class="meta-item">
+                    <img src="icons/calendar.svg" alt="Date" width="14" height="14" loading="lazy">
+                    March 07, 2025
+                </span>
+                <span class="meta-item">
+                    <img src="icons/clock.svg" alt="Read time" width="14" height="14" loading="lazy">
+                    5 min read
+                </span>
+                </div>
+                <img src="icons/substack.svg" alt="Substack" width="20" height="20" loading="lazy">
+            </div>
+            <div class="blog-content">
+                <h4>Blog Post Title Goes Here</h4>
+                <p>This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating.</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+            <a href="https://substack.com/@coreymichaud" target="_blank">
+            <div class="blog-meta">
+                <div class="blog-meta-left">
+                <span class="meta-item">
+                    <img src="icons/calendar.svg" alt="Date" width="14" height="14" loading="lazy">
+                    March 07, 2025
+                </span>
+                <span class="meta-item">
+                    <img src="icons/clock.svg" alt="Read time" width="14" height="14" loading="lazy">
+                    5 min read
+                </span>
+                </div>
+                <img src="icons/substack.svg" alt="Substack" width="20" height="20" loading="lazy">
+            </div>
+            <div class="blog-content">
+                <h4>Blog Post Title Goes Here</h4>
+                <p>This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating.</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+            <a href="https://substack.com/@coreymichaud" target="_blank">
+            <div class="blog-meta">
+                <div class="blog-meta-left">
+                <span class="meta-item">
+                    <img src="icons/calendar.svg" alt="Date" width="14" height="14" loading="lazy">
+                    March 07, 2025
+                </span>
+                <span class="meta-item">
+                    <img src="icons/clock.svg" alt="Read time" width="14" height="14" loading="lazy">
+                    5 min read
+                </span>
+                </div>
+                <img src="icons/substack.svg" alt="Substack" width="20" height="20" loading="lazy">
+            </div>
+            <div class="blog-content">
+                <h4>Blog Post Title Goes Here</h4>
+                <p>This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating.</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+            <a href="https://substack.com/@coreymichaud" target="_blank">
+            <div class="blog-meta">
+                <div class="blog-meta-left">
+                <span class="meta-item">
+                    <img src="icons/calendar.svg" alt="Date" width="14" height="14" loading="lazy">
+                    March 07, 2025
+                </span>
+                <span class="meta-item">
+                    <img src="icons/clock.svg" alt="Read time" width="14" height="14" loading="lazy">
+                    5 min read
+                </span>
+                </div>
+                <img src="icons/substack.svg" alt="Substack" width="20" height="20" loading="lazy">
+            </div>
+            <div class="blog-content">
+                <h4>Blog Post Title Goes Here</h4>
+                <p>This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating. This is the description of the blog post. It should be kept short enough to fit within two lines maximum before truncating.</p>
+            </div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="see-more">
+        <a href="https://substack.com/@coreymichaud" target="_blank">
+            <button class="more">See more -></button>
+        </a>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer>
+
+    <p>Copyright &copy; 2026 Corey Michaud. All rights reserved.</p>
+    
+    <div class="footer-icons">
+        <a href="https://github.com/coreymichaud" target="_blank"><img src="icons/github.svg" alt="GitHub" loading="lazy"></a>
+        <a href="https://www.linkedin.com/in/coreymichaud1/" target="_blank"><img src="icons/linkedin.svg" alt="LinkedIn" loading="lazy"></a>
+        <a href="https://www.kaggle.com/coreymichaud" target="_blank"><img src="icons/kaggle.svg" alt="Kaggle" loading="lazy"></a>
+        <a href="https://public.tableau.com/app/profile/corey.michaud/vizzes" target="_blank"><img src="icons/tableau.svg" alt="Tableau" loading="lazy"></a>
+        <a href="mailto:cor3y.michaud@gmail.com"><img src="icons/email.svg" alt="Email" loading="lazy"></a>
+    </div>
+
+    </footer>
+
+</body>
+</html>

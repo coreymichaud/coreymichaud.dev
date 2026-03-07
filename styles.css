@@ -1,0 +1,497 @@
+/* ========== VARIABLES ========== */
+:root {
+    --blue: #4169e1;
+    --grey-subtle: #ddd;      
+    --grey-mid: #999;        
+    --grey-text: #666;         
+    --grey-footer: darkgrey;
+    --shadow-sm: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-md: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* ========== GENERAL ========== */
+* {
+    font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0 auto 20px auto;
+    padding: 0;
+    font-size: 18px;
+    width: 60%;
+    max-width: 1200px;
+}
+
+.section-header {
+    margin: 100px 0 0;
+    border-bottom: 3px solid black;
+    font-size: 48px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.see-more {
+    display: flex;
+    justify-content: center;
+}
+
+.see-more button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+/* ========== NAV BAR ========== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    z-index: 10;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: 425;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* ========== HOME ========== */
+#home {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 120px 0;
+    justify-content: center;
+}
+
+.hero-image {
+    position: relative;
+    flex-shrink: 0;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
+}
+
+.hero-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.location-badge {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 16px;
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.location-badge img {
+    filter: invert(29%) sepia(89%) saturate(1500%) hue-rotate(213deg) brightness(97%) contrast(96%);
+    width: 20px;
+    height: 20px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-text h1 {
+    font-size: 96px;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.hero-text p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    max-width: 50ch;
+}
+
+.highlight {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.hero-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1.5px solid var(--grey-subtle);
+    border-radius: 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.hero-icons a img {
+    width: 22px;
+    height: 22px;
+}
+
+.hero-icons a:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.hero-icons a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* ========== ABOUT ========== */
+.card-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-left img {
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.company-name {
+    font-weight: bold;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.job-title {
+    font-size: 0.875em;
+    color: var(--grey-text);
+    line-height: 1.3;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.location {
+    font-size: 0.875em;
+    line-height: 1.3;
+}
+
+.date {
+    font-size: 0.875em;
+    color: var(--grey-text);
+    line-height: 1.3;
+}
+
+.job-card details > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    user-select: none;
+}
+
+.job-card details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.job-card li {
+    line-height: 1.6;
+}
+
+.chevron {
+    display: inline-block;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: opacity 0.15s ease, transform 0.25s ease;
+    font-style: normal;
+    line-height: 1;
+    font-size: 0.75em;
+    color: var(--grey-mid);
+}
+
+.job-card details > summary:hover .chevron {
+    opacity: 1;
+}
+
+.job-card details[open] > summary .chevron {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.job-card details ul {
+    margin-top: 0;
+    margin: 0px 72px;
+    padding-left: 16px;
+    list-style-position: outside;
+}
+
+.education-card .card-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+/* ========== PROJECTS ========== */
+.project-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 18px 0;
+}
+
+.project-card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project-card {
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+    width: calc(33.333333% - 14px);
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.project-card:hover h4{
+    color: var(--blue);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+/* ========== BLOG ========== */
+.blog-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 18px 0px;
+}
+
+.blog-card {
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.blog-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.blog-card:hover h4{
+    color: var(--blue);
+}
+
+.blog-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 14px 16px;
+}
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.blog-meta-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8em;
+    color: var(--grey-text);
+}
+
+.blog-content h4 {
+    margin: 0 0 4px;
+    font-size: 1em;
+}
+
+.blog-content p {
+    margin: 0;
+    font-size: 0.875em;
+    color: var(--grey-text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-card .blog-meta > img {
+    filter: invert(52%) sepia(99%) saturate(601%) hue-rotate(349deg) brightness(101%) contrast(97%);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--grey-footer);
+    margin-top: 100px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    color: grey;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-icons a img {
+    filter: invert(50%);
+    height: 18px;
+    width: 18px;
+    display: block;
+}
+
+.footer-icons a img:hover {
+    filter: invert(29%) sepia(89%) saturate(1500%) hue-rotate(213deg) brightness(97%) contrast(96%);
+}
+
+/* ========== MEDIA ========== */
+@media (max-width: 900px) {
+    .project-card {
+        width: calc(50% - 10px);
+    }
+
+    #home {
+        flex-direction: column;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .hero-text {
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-text h1 {
+        font-size: 64px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .location-badge img {
+        width: 20px;
+        height: 20px;
+    }
+
+    body {
+        width: 90%;
+    }
+
+    footer p {
+    font-size: 10px;
+    }
+
+    .job-title {
+        font-size: 0.7em;
+    }
+
+    .company-name {
+        font-size: 0.8em;
+    }
+
+    .location {
+        font-size: 0.7em;
+    }
+
+    .date {
+       font-size: 0.7em;
+    }
+
+    .hero-text h1 {
+        font-size: 60px;
+    }
+}
