@@ -29,7 +29,7 @@ body {
 }
 
 .section-header {
-    margin: 100px 0 0;
+    margin: 80px 0 0;
     border-bottom: 3px solid black;
     font-size: 48px;
 }
@@ -84,15 +84,42 @@ nav a:hover {
 }
 
 /* ========== HOME ========== */
+
+/*
+ * Desktop layout uses CSS Grid so the visual order stays:
+ *   [image]  [name  ]
+ *   [image]  [p+icons]
+ *
+ * The DOM order is: .hero-name → .hero-image → .hero-text
+ * Grid explicitly places each item, overriding DOM order on desktop.
+ * On mobile we switch to flex-column and the natural DOM order
+ * gives us: name → image → p+icons — exactly what we want.
+ */
 #home {
-    display: flex;
-    align-items: center;
-    gap: 48px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 48px;
     padding: 120px 0;
     justify-content: center;
+    align-content: center;
 }
 
+/* Name sits top-right */
+.hero-name {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    font-size: 96px;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+/* Image spans both rows on the left */
 .hero-image {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
     position: relative;
     flex-shrink: 0;
     filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
@@ -122,21 +149,19 @@ nav a:hover {
 }
 
 .location-badge img {
-    filter: invert(29%) sepia(89%) saturate(1500%) hue-rotate(213deg) brightness(97%) contrast(96%);
+    filter: invert(36%) sepia(91%) saturate(1604%) hue-rotate(213deg) brightness(92%) contrast(92%);
     width: 20px;
     height: 20px;
 }
 
+/* Paragraph + icons sit bottom-right */
 .hero-text {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.hero-text h1 {
-    font-size: 96px;
-    font-weight: 800;
-    margin: 0 0 12px;
 }
 
 .hero-text p {
@@ -282,6 +307,10 @@ nav a:hover {
     list-style-position: outside;
 }
 
+.phone-job-bullet {
+    display: none;
+}
+
 .education-card .card-summary {
     display: flex;
     align-items: center;
@@ -320,6 +349,14 @@ nav a:hover {
 
 .project-card:hover h4{
     color: var(--blue);
+}
+
+.project-card h4 {
+    margin: 8px 0 0px;
+}
+
+.project-card p {
+    margin: 8px 0 14px 0;
 }
 
 .container {
@@ -426,7 +463,7 @@ footer p {
 }
 
 .footer-icons a img:hover {
-    filter: invert(29%) sepia(89%) saturate(1500%) hue-rotate(213deg) brightness(97%) contrast(96%);
+    filter: invert(36%) sepia(91%) saturate(1604%) hue-rotate(213deg) brightness(92%) contrast(92%);
 }
 
 /* ========== MEDIA ========== */
@@ -435,10 +472,17 @@ footer p {
         width: calc(50% - 10px);
     }
 
+    /* Switch from grid to flex-column; DOM order (name → image → text) is fine at tablet */
     #home {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         padding: 80px 0;
         text-align: center;
+    }
+
+    .hero-name {
+        margin: 0 0 32px;
     }
 
     .hero-text {
@@ -452,29 +496,37 @@ footer p {
     }
 
     .hero-image img {
-        width: 220px;
-        height: 220px;
+        width: 180px;
+        height: 180px;
     }
 
-    .hero-text h1 {
-        font-size: 64px;
+    /* DOM order is already: .hero-name → .hero-image → .hero-text — no extra work needed */
+    .hero-name {
+        font-size: 40px;
+        margin: 0 0 24px;
+        text-align: center;
     }
 
     .hero-text p {
         font-size: 18px;
+        margin-top: 36px;
     }
 
     .location-badge img {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .location-badge {
+        font-size: 13px;
     }
 
     body {
-        width: 90%;
+        width: 80%;
     }
 
     footer p {
-    font-size: 10px;
+        font-size: 10px;
     }
 
     .job-title {
@@ -493,7 +545,64 @@ footer p {
        font-size: 0.7em;
     }
 
-    .hero-text h1 {
-        font-size: 60px;
+    .footer-icons a img {
+        filter: invert(50%);
+        height: 14px;
+        width: 14px;
+        display: block;
+    }
+
+    #home {
+        padding: 60px 0 160px 0;
+    }
+
+    .card-right {
+        display: none;
+    }
+
+    .section-header {
+        font-size: 36px;
+    }
+
+    .container h4 {
+        font-size: 16px;
+    }
+
+    .container p {
+        font-size: 14px;
+    }
+
+    .blog-content h4 {
+        font-size: 16px;
+    }
+
+    .blog-content p {
+        font-size: 14px;
+    }
+
+    .see-more button {
+        font-size: 16px
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h2 {
+        margin: 20px 0 0 0;
+    }
+
+    li {
+        font-size: 12px;
+    }
+
+    .job-card details ul {
+        margin: 0px 60px;
+    }
+
+    .phone-job-bullet {
+        display: list-item;
+        font-style: italic;
+        font-weight: 500;
     }
 }
