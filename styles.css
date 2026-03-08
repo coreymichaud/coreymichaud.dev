@@ -24,7 +24,7 @@ body {
     margin: 0 auto 20px auto;
     padding: 0;
     font-size: 18px;
-    width: 60%;
+    width: 65%;
     max-width: 1200px;
 }
 
@@ -100,7 +100,7 @@ nav a:hover {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 48px;
-    padding: 120px 0;
+    padding: 120px 0 220px 0;
     justify-content: center;
     align-content: center;
 }
@@ -110,9 +110,14 @@ nav a:hover {
     grid-column: 2;
     grid-row: 1;
     align-self: end;
-    font-size: 96px;
+    font-size: 82px;
     font-weight: 800;
     margin: 0 0 12px;
+}
+
+.link {
+    color: var(--blue);
+    font-weight: 500;
 }
 
 /* Image spans both rows on the left */
@@ -134,7 +139,7 @@ nav a:hover {
 
 .location-badge {
     position: absolute;
-    bottom: -14px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
     background: white;
