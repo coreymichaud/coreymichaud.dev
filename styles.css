@@ -41,6 +41,7 @@ a {
 
 p {
     line-height: 1.6;
+    font-size: 16px;
 }
 
 .see-more {
@@ -85,19 +86,9 @@ nav a:hover {
 
 /* ========== HOME ========== */
 
-/*
- * Desktop layout uses CSS Grid so the visual order stays:
- *   [image]  [name  ]
- *   [image]  [p+icons]
- *
- * The DOM order is: .hero-name → .hero-image → .hero-text
- * Grid explicitly places each item, overriding DOM order on desktop.
- * On mobile we switch to flex-column and the natural DOM order
- * gives us: name → image → p+icons — exactly what we want.
- */
 #home {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto 1fr;
     column-gap: 48px;
     padding: 120px 0 220px 0;
@@ -105,7 +96,6 @@ nav a:hover {
     align-content: center;
 }
 
-/* Name sits top-right */
 .hero-name {
     grid-column: 2;
     grid-row: 1;
@@ -120,7 +110,6 @@ nav a:hover {
     font-weight: 500;
 }
 
-/* Image spans both rows on the left */
 .hero-image {
     grid-column: 1;
     grid-row: 1 / 3;
@@ -159,7 +148,6 @@ nav a:hover {
     height: 20px;
 }
 
-/* Paragraph + icons sit bottom-right */
 .hero-text {
     grid-column: 2;
     grid-row: 2;
@@ -362,6 +350,7 @@ nav a:hover {
 
 .project-card p {
     margin: 8px 0 14px 0;
+    font-size: 16px;
 }
 
 .container {
@@ -477,7 +466,6 @@ footer p {
         width: calc(50% - 10px);
     }
 
-    /* Switch from grid to flex-column; DOM order (name → image → text) is fine at tablet */
     #home {
         display: flex;
         flex-direction: column;
