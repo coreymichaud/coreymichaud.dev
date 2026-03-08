@@ -500,11 +500,10 @@ footer p {
         height: 180px;
     }
 
-    /* DOM order is already: .hero-name → .hero-image → .hero-text — no extra work needed */
     .hero-name {
         font-size: 40px;
         margin: 0 0 24px;
-        text-align: center;
+        width: 100%;
     }
 
     .hero-text p {
@@ -553,7 +552,7 @@ footer p {
     }
 
     #home {
-        padding: 60px 0 160px 0;
+        padding: 40px 0 120px 0;
     }
 
     .card-right {
