@@ -1,26 +1,23 @@
 # Hello!
 
-This is a huge WIP so I'll edit it later
+Hey! I'm Corey :) I'm going to type more of this later... sorry!
 
 ## Why only HTML/CSS?
 
-- Mention that this is only HTML and CSS and the whole point of it is to get better at HTML/CSS and that you wanted to get comfortable with using CloudFlare, for instance hosting images on there for faster loading and using caching, CDN, etc
-- Mention that this is V1 of your website, and that at some point you will add javascript and make it more interactive (like a real website), and will probably use a framework like React or Next.js
-- Also explain you're not a web developer so don't need to go hard but want to learn HTML/CSS/JS to get better at web scraping in python which needs those
-- Remember you're not planning on being a software engineer
-- Talk about simplicity. You wanted V1 to be kind of "bare bones" and then you're planning on V2 being a lot more in depth and have a nicer design.
+Once upon a time I knew a little bit of JavaScript (JS). Then I started college, realized I needed to know a whole lot of coding, and none of it was web dev related, so I stopped using it. I went to school for statistics, so I mainly use Python and R. I wanted to create my website so that I can practice HTML and CSS, but wait to continue practicing JS. I will come back to it because I have lots of things I'd like to do on my mind, but not yet!
+
+Another reason why I wanted to just use HTML and CSS is because I'm seeing this as V1, where there's no JS, and then in the future I will kind of redo this website using JS, doing a whole rework with what I've learned.
 
 ## JavaScript Over Django?
 
-- Talk about why you'd want to use JavaScript which means learning a new language instead of using Django because you already know python
+I've thought long and hard about learning Django. It would mean that I can use it with the programming language I already know, and a lot of big companies use it, so it can't be that bad, right? Well... I know JS is made for the web and everyone uses it, so just to kind of go with the flow, I wanted to learn JS in the future. I think it would be fun!
 
 ## Using CloudFlare For Everything
 
-- Look at the HTML/CSS bullets
-- Mention for V2 you will still probably host it on CloudFlare (pages) because even though you're using AWS as your main cloud service provider, this portfolio website isn't crazy and you bought the domain name on CloudFlare and know the DDoS protection goes crazy (give a link explaining that from CloudFlare directly) so you wanted to just use it and learn about it
-- Talk about using CloudFlare Images for images instead of a image folder
-- Talk about wanting to learn the CloudFlare stack
+This site isn't very complex. It's just a simple portfolio site. As a result, I'm able to fully host it on Cloudflare using everything they have to offer. I like that I can just use Cloudflare rather than needing multiple providers for different things. 
+
+Once I do V2 of this site with JS, I plan on using more of the Cloudflare offerings.
 
 ## Blogging On Here Over Using Substack
 
-- Talk about pros and cons that you weighed when deciding to do a blog page on the website vs one on substack (say for now you want to just do site, and at some point will try to move over to substack while trying to have stuff on your website, which might mean dividing up what gets posted on here vs substack, which could be like the portfolio site is more of a blog and the substack is more educational)
+My blog currently is on Substack rather than having it on my site. This is because it would be less to code and less to worry about. Substack is also a social platform, so there's lots of benefits to it. Once I learn JS and do V2, I plan on thinking about switching the blog over to my website, but I'm not 100% sure.
